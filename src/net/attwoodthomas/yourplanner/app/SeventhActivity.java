@@ -32,7 +32,7 @@ public class SeventhActivity extends ListActivity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SeventhActivity.this, HomeworkActivity.class);
+                Intent intent = new Intent(SeventhActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

@@ -2,7 +2,10 @@ package net.attwoodthomas.yourplanner.app;
 
 import net.attwoodthomas.yourplanner.app.database.helper.DatabaseHelper;
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
@@ -14,6 +17,8 @@ public class HomeActivity extends Activity {
     private Button mTimetableButton;
     private Button mHomeworkButton;
     private Button mMeritsButton;
+    private Button mRateUsButton;
+    private Context context;
     public DatabaseHelper db = new DatabaseHelper(this);
 
 	@Override
@@ -21,9 +26,10 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 		
-		 mHomeworkButton = (Button) findViewById(R.id.button2);
+		 	mHomeworkButton = (Button) findViewById(R.id.button2);
 	        mTimetableButton = (Button) findViewById(R.id.button);
 	        mMeritsButton = (Button) findViewById(R.id.button3);
+	        mRateUsButton = (Button) findViewById(R.id.button5);
 
 	        mHomeworkButton.setOnClickListener(new View.OnClickListener() {
 	            @Override
@@ -48,6 +54,22 @@ public class HomeActivity extends Activity {
 	                startActivity(intent);
 	            }
 	        });
+	        
+	        mRateUsButton.setOnClickListener(new View.OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					// TODO Auto-generated method stub
+					/*Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
+					Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
+					try {
+					  startActivity(goToMarket);
+					} catch (ActivityNotFoundException e) {
+					  startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + context.getPackageName())));
+					}*/
+					
+				}
+			});
 	}
 
 	@Override

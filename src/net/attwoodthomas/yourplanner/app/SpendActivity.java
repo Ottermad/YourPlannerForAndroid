@@ -46,7 +46,7 @@ public class SpendActivity extends Activity {
                     toast.show();
                 }
 
-                Intent intent = new Intent(SpendActivity.this, MeritsActivity.class);
+                Intent intent = new Intent(SpendActivity.this, MainActivity.class);
                 startActivity(intent);
 
             }

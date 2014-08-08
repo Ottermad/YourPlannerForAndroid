@@ -34,7 +34,7 @@ public class FifthActivity extends Activity {
             @Override
             public void onClick(View view) {
                 db.addHomework(mSubject.getText().toString(), mDate.getText().toString(), mDescription.getText().toString());
-                Intent intent = new Intent(FifthActivity.this, HomeworkActivity.class);
+                Intent intent = new Intent(FifthActivity.this, HomeActivity.class);
                 startActivity(intent);
 
             }

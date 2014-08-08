@@ -43,7 +43,7 @@ public class EigthActivity extends Activity {
             public void onClick(View view) {
                 String[] data = {subjectView.getText().toString(), dateView.getText().toString(), descriptionView.getText().toString()};
                 db.deleteHomeworkForever(data);
-                Intent intent = new Intent(EigthActivity.this, SeventhActivity.class);
+                Intent intent = new Intent(EigthActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

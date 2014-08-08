@@ -43,7 +43,7 @@ public class SecondActivity extends Activity {
         mGoBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SecondActivity.this, MainActivity.class);
+                Intent intent = new Intent(SecondActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

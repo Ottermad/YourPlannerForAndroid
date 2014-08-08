@@ -87,7 +87,7 @@ public class ThirdActivity extends Activity {
                 ThirdActivity.this.db.updateLessons(ThirdActivity.this.mWeek, ThirdActivity.this.mDay, ThirdActivity.this.mPeriod1.getText().toString(), ThirdActivity.this.mPeriod2.getText().toString(), ThirdActivity.this.mPeriod3.getText().toString(), ThirdActivity.this.mPeriod4.getText().toString(), ThirdActivity.this.mPeriod5.getText().toString(), ThirdActivity.this.mPeriod6.getText().toString());
 
                 if (mCounter == 9) {
-                    Intent intent = new Intent(ThirdActivity.this, MainActivity.class);
+                    Intent intent = new Intent(ThirdActivity.this, HomeActivity.class);
                     startActivity(intent);
                 } else {
                     mCounter = mCounter + 1;

@@ -31,7 +31,7 @@ public class FourthActivity extends ListActivity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(FourthActivity.this, HomeworkActivity.class);
+                Intent intent = new Intent(FourthActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });

@@ -32,7 +32,7 @@ public class SixthActivity extends Activity {
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SixthActivity.this, FourthActivity.class);
+                Intent intent = new Intent(SixthActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
         });
@@ -43,7 +43,7 @@ public class SixthActivity extends Activity {
             public void onClick(View view) {
                 String[] data = {subjectView.getText().toString(), dateView.getText().toString(), descriptionView.getText().toString()};
                 db.deleteHomework(data);
-                Intent intent = new Intent(SixthActivity.this, FourthActivity.class);
+                Intent intent = new Intent(SixthActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });

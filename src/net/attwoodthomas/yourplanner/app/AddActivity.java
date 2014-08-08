@@ -48,7 +48,7 @@ public class AddActivity extends Activity {
                     toast.show();
                 }
 
-                Intent intent = new Intent(AddActivity.this, MeritsActivity.class);
+                Intent intent = new Intent(AddActivity.this, HomeActivity.class);
                 startActivity(intent);
 
             }
