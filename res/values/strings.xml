@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">YourPlanner</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <string name="title_activity_fourth">FourthActivity</string>
+    <string name="title_activity_fifth">FifthActivity</string>
+    <string name="title_activity_sixth">SixthActivity</string>
+    <string name="title_activity_seventh">SeventhActivity</string>
+    <string name="title_activity_eight">EightActivity</string>
+    <string name="title_activity_eigth">EigthActivity</string>
+    <string name="title_activity_homework">HomeworkActivity</string>
+    <string name="title_activity_merits">MeritsActivity</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_spend">SpendActivity</string>
+
+</resources>

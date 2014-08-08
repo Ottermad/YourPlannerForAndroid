@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="net.attwoodthomas.yourplanner.app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.SecondActivity"
+            android:label="@string/title_activity_second" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.ThirdActivity"
+            android:label="@string/title_activity_third" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.FourthActivity"
+            android:label="@string/title_activity_fourth" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.FifthActivity"
+            android:label="@string/title_activity_fifth" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.SixthActivity"
+            android:label="@string/title_activity_sixth" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.SeventhActivity"
+            android:label="@string/title_activity_seventh" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.EigthActivity"
+            android:label="@string/title_activity_eigth" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.HomeworkActivity"
+            android:label="@string/title_activity_homework" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.MeritsActivity"
+            android:label="@string/title_activity_merits" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.AddActivity"
+            android:label="@string/title_activity_add" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.SpendActivity"
+            android:label="@string/title_activity_spend" >
+        </activity>
+    </application>
+
+</manifest>
