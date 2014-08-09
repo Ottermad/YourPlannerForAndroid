@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class HomeActivity extends Activity {
 	
@@ -67,6 +68,13 @@ public class HomeActivity extends Activity {
 					} catch (ActivityNotFoundException e) {
 					  startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + context.getPackageName())));
 					}*/
+					
+					Context context = getApplicationContext();
+                    CharSequence text = "Feature Disabled";
+                    int duration = Toast.LENGTH_LONG;
+
+                    Toast toast = Toast.makeText(context, text, duration);
+                    toast.show();
 					
 				}
 			});
