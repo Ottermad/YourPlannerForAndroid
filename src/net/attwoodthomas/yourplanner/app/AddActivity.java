@@ -2,6 +2,7 @@ package net.attwoodthomas.yourplanner.app;
 
 import net.attwoodthomas.yourplanner.app.database.helper.DatabaseHelper;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -31,25 +32,38 @@ public class AddActivity extends Activity {
         mSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (db.addMerits(mCode.getText().toString(),mAmount.getText().toString()) == true) {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Success :)";
-                    int duration = Toast.LENGTH_LONG;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-
+                String amountValue = mAmount.getText().toString();
+                String codeValue = mCode.getText().toString();
+                if (amountValue.isEmpty() || codeValue.isEmpty()) {
+                    // TODO: Create a AlertDialog
+                    AlertDialog.Builder builder= new AlertDialog.Builder(AddActivity.this);
+                    builder.setMessage("Please enter a value for all fields")
+                            .setTitle("Opps!")
+                            .setPositiveButton(android.R.string.ok,null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
                 } else {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Failed :(";
-                    int duration = Toast.LENGTH_LONG;
 
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
+                    if (db.addMerits(codeValue, amountValue) == true) {
+                        Context context = getApplicationContext();
+                        CharSequence text = "Success :)";
+                        int duration = Toast.LENGTH_LONG;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+
+                    } else {
+                        Context context = getApplicationContext();
+                        CharSequence text = "Failed :(";
+                        int duration = Toast.LENGTH_LONG;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    }
+
+                    Intent intent = new Intent(AddActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 }
-
-                Intent intent = new Intent(AddActivity.this, HomeActivity.class);
-                startActivity(intent);
 
             }
         });

@@ -2,6 +2,7 @@ package net.attwoodthomas.yourplanner.app;
 
 import net.attwoodthomas.yourplanner.app.database.helper.DatabaseHelper;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -33,9 +34,24 @@ public class FifthActivity extends Activity {
         mAddButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                db.addHomework(mSubject.getText().toString(), mDate.getText().toString(), mDescription.getText().toString());
-                Intent intent = new Intent(FifthActivity.this, HomeActivity.class);
-                startActivity(intent);
+                String subjectValue = mSubject.getText().toString();
+                String dateValue = mDate.getText().toString();
+                String descriptionValue = mDescription.getText().toString();
+
+                if (subjectValue.isEmpty() || dateValue.isEmpty() || descriptionValue.isEmpty() ) {
+                    // TODO: Create a AlertDialog
+                    AlertDialog.Builder builder= new AlertDialog.Builder(FifthActivity.this);
+                    builder.setMessage("Please enter a value for all fields")
+                            .setTitle("Opps!")
+                            .setPositiveButton(android.R.string.ok,null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                } else {
+                    db.addHomework(subjectValue, dateValue, descriptionValue);
+                    Intent intent = new Intent(FifthActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                }
 
             }
         });
