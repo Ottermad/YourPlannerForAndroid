@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/Clairethomas/AndroidStudioProjects/YourPlanner/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/Clairethomas/AndroidStudioProjects/YourPlanner/res/values/strings.xml -->
     <eat-comment />
 
     <string name="action_settings">Settings</string>
@@ -25,7 +25,7 @@
     <string name="title_activity_sixth">SixthActivity</string>
     <string name="title_activity_spend">SpendActivity</string>
     <string name="title_activity_third">ThirdActivity</string>
-    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/Clairethomas/AndroidStudioProjects/YourPlanner/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">

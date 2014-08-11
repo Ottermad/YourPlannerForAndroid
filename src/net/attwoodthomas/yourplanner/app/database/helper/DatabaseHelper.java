@@ -12,17 +12,74 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+
+    // Member Variables
 	
-	private static final String CREATE_TABLE_LESSONS = "CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));";
-    private static final String DATABASE_NAME = "planner";
-    private static final int DATABASE_VERSION = 5;
-    private static final String INSERT_VALUES = "INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music');";
-    private static final String LOG = "DatabaseHelper";
+	// Base Functions
 
     public DatabaseHelper(Context paramContext)
     {
         super(paramContext, "lessons", null, 1);
     }
+
+    // Create Tables and insert data if need be
+    public void onCreate(SQLiteDatabase paramSQLiteDatabase) {
+        // Create Table lessons to store people's timetable
+        paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
+
+        // Create Table homework to store people's homework
+        paramSQLiteDatabase.execSQL("CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+
+        // Create Table past_homework to store people's completed homework
+        paramSQLiteDatabase.execSQL("CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+
+        // Create Table merits to store people's merits
+        paramSQLiteDatabase.execSQL("CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
+
+        // Create Table codes to store the teacher's codes they enter to add merits
+        paramSQLiteDatabase.execSQL("CREATE TABLE codes (code VARCHAR(10));");
+
+        // Create Table periods to store how many periods the user has in  a day
+        paramSQLiteDatabase.execSQL("CREATE TABLE periods (periods VARCHAR(10));");
+
+        // Check if lessons table is populated if not insert dummy data
+        if (paramSQLiteDatabase.rawQuery("SELECT * FROM lessons", null).moveToFirst()) {
+            Log.d("DatabaseHelper", "not emtpy");
+            return;
+        } else {
+            Log.d("DatabaseHelper", "emtpy");
+            paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music');");
+        }
+
+        // Check if homwork is not populated if so insert dummy data
+        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM homework", null).moveToFirst()) {
+            paramSQLiteDatabase.execSQL("INSERT INTO homework VALUES ('Maths', '08.03.04', 'Finish p38');");
+        }
+
+        // Check if merits is not populated if so insert dummy data
+        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM merits", null).moveToFirst()) {
+            paramSQLiteDatabase.execSQL("INSERT INTO merits VALUES ('0', '0');");
+        }
+
+        // Check if codes is not populated if so insert dummy data
+        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM homework", null).moveToFirst()) {
+            paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
+        }
+    }
+
+    public void onUpgrade(SQLiteDatabase paramSQLiteDatabase, int paramInt1, int paramInt2)
+    {
+        // Remove then recreate tables
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE codes (code VARCHAR(10));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE periods (periods VARCHAR(10));");
+        onCreate(paramSQLiteDatabase);
+    }
+
+    // Homework Functions
 
     public void getHomework() {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
@@ -120,6 +177,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    // Lesson / Timetable Functions
+
     public void getLessons()
     {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
@@ -142,6 +201,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.d("DatabaseHelper", "8");
         localCursor.close();
     }
+
+    public void updateLessons(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8)
+    {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String str1 = "DELETE FROM lessons WHERE week = '" + paramString1 + "' AND day = '" + paramString2 + "';";
+        String str2 = "INSERT INTO lessons VALUES ('" + paramString1 + "', '" + paramString2 + "', '" + paramString3 + "', '" + paramString4 + "', '" + paramString5 + "', '" + paramString6 + "', '" + paramString7 + "', '" + paramString8 + "');";
+        localSQLiteDatabase.execSQL(str1);
+        localSQLiteDatabase.execSQL(str2);
+    }
+
+    // Merit Functions
 
     public String[] getMerits() {
         String[] merits = {"", ""};
@@ -229,42 +299,33 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void onCreate(SQLiteDatabase paramSQLiteDatabase)
-    {
-        paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
-        paramSQLiteDatabase.execSQL("CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
-        paramSQLiteDatabase.execSQL("CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
-        paramSQLiteDatabase.execSQL("CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
-        paramSQLiteDatabase.execSQL("CREATE TABLE codes (code VARCHAR(10));");
-        if (paramSQLiteDatabase.rawQuery("SELECT * FROM lessons", null).moveToFirst())
-        {
-            Log.d("DatabaseHelper", "not emtpy");
-            return;
-        }
-        Log.d("DatabaseHelper", "emtpy");
-        paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music');");
-        paramSQLiteDatabase.execSQL("INSERT INTO homework VALUES ('Maths', '08.03.04', 'Finish p38');");
-        paramSQLiteDatabase.execSQL("INSERT INTO merits VALUES ('0', '0');");
-        paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
-    }
 
-    public void onUpgrade(SQLiteDatabase paramSQLiteDatabase, int paramInt1, int paramInt2)
-    {
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE codes (code VARCHAR(10));");
-        onCreate(paramSQLiteDatabase);
-    }
 
-    public void updateLessons(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8)
-    {
+
+    // Number of Period Functions
+
+    public boolean checkPeriodNumber() {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
-        String str1 = "DELETE FROM lessons WHERE week = '" + paramString1 + "' AND day = '" + paramString2 + "';";
-        String str2 = "INSERT INTO lessons VALUES ('" + paramString1 + "', '" + paramString2 + "', '" + paramString3 + "', '" + paramString4 + "', '" + paramString5 + "', '" + paramString6 + "', '" + paramString7 + "', '" + paramString8 + "');";
+        String[] tblName  = {};
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM periods",tblName);
+
+        localCursor.moveToFirst();
+        String numberOfPeriods = localCursor.getString(0);
+        if (numberOfPeriods.equals("0")) {
+           return false;
+        } else {
+            return true;
+        }
+
+    }
+
+    public void updateNumberOfPeriods (String numberOfPeriods) {
+
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String str1 = "INSERT INTO periods VALUES ('" + numberOfPeriods + "');";
         localSQLiteDatabase.execSQL(str1);
-        localSQLiteDatabase.execSQL(str2);
+
+
     }
 
 }

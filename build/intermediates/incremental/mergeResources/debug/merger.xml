@@ -2,164 +2,169 @@
 <merger version="2" >
 
     <dataSet config="main" >
-        <source path="/Users/Shared/EclipseProjects/YourPlanner/res" >
+        <source path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res" >
             <file
                 name="ic_launcher"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-hdpi/ic_launcher.png"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\drawable-hdpi\ic_launcher.png"
                 qualifiers="hdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-mdpi/ic_launcher.png"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\drawable-mdpi\ic_launcher.png"
                 qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xhdpi/ic_launcher.png"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\drawable-xhdpi\ic_launcher.png"
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xxhdpi/ic_launcher.png"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\drawable-xxhdpi\ic_launcher.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
                 name="activity_add"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_add.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_add.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_eigth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_eigth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_eigth.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_fifth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_fifth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_fifth.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_fourth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_fourth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_fourth.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_home"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_home.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_home.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_homework"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_homework.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_homework.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_main"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_main.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_main.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_merits"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_merits.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_merits.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_second"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_second.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_second.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_seventh"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_seventh.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_seventh.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_sixth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_sixth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_sixth.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_spend"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_spend.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_spend.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_third"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_third.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout\activity_third.xml"
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_main"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\layout-small\activity_main.xml"
+                qualifiers="small-v4"
+                type="layout" />
+            <file
                 name="add"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/add.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\add.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="eight"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/eight.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\eight.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="eigth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/eigth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\eigth.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="fifth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/fifth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\fifth.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="fourth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/fourth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\fourth.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="home"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/home.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\home.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="homework"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/homework.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\homework.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="main"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/main.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\main.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="merits"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/merits.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\merits.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="second"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/second.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\second.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="seventh"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/seventh.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\seventh.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="sixth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/sixth.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\sixth.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="spend"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/spend.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\spend.xml"
                 qualifiers=""
                 type="menu" />
             <file
                 name="third"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/third.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\menu\third.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values/dimens.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values\dimens.xml"
                 qualifiers="" >
                 <dimen name="activity_horizontal_margin" >16dp
                 </dimen>
@@ -167,7 +172,7 @@
                 </dimen>
             </file>
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values/strings.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values\strings.xml"
                 qualifiers="" >
                 <string name="title_activity_eigth" >EigthActivity
                 </string>
@@ -203,7 +208,7 @@
                 </string>
             </file>
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values/styles.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values\styles.xml"
                 qualifiers="" >
 
                 <style
@@ -227,13 +232,13 @@
                 </style>
             </file>
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values-sw720dp-land/dimens.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values-sw720dp-land\dimens.xml"
                 qualifiers="sw720dp-land-v13" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values-v11/styles.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values-v11\styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -245,7 +250,7 @@
                 </style>
             </file>
             <file
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/values-v14/styles.xml"
+                path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\res\values-v14\styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -256,17 +261,12 @@
 
                 </style>
             </file>
-            <file
-                name="activity_main"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout-small/activity_main.xml"
-                qualifiers="small-v4"
-                type="layout" />
         </source>
-        <source path="/Users/Shared/EclipseProjects/YourPlanner/build/generated/res/rs/debug" />
-        <source path="/Users/Shared/EclipseProjects/YourPlanner/build/generated/res/generated/debug" />
+        <source path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\build\generated\res\rs\debug" />
+        <source path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\build\generated\res\generated\debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/Shared/EclipseProjects/YourPlanner/build-types/debug/res" />
+        <source path="C:\Users\Clairethomas\AndroidStudioProjects\YourPlanner\build-types\debug\res" />
     </dataSet>
 
 </merger>
