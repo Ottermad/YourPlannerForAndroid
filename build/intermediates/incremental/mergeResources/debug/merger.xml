@@ -89,6 +89,11 @@
                 qualifiers=""
                 type="layout" />
             <file
+                name="activity_main"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout-small/activity_main.xml"
+                qualifiers="small-v4"
+                type="layout" />
+            <file
                 name="add"
                 path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/add.xml"
                 qualifiers=""
@@ -256,11 +261,6 @@
 
                 </style>
             </file>
-            <file
-                name="activity_main"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout-small/activity_main.xml"
-                qualifiers="small-v4"
-                type="layout" />
         </source>
         <source path="/Users/Shared/EclipseProjects/YourPlanner/build/generated/res/rs/debug" />
         <source path="/Users/Shared/EclipseProjects/YourPlanner/build/generated/res/generated/debug" />
