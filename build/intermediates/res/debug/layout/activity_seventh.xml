@@ -16,7 +16,7 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button71" />
+        android:layout_above="@+id/button72" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,10 +39,20 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="Home"
         android:id="@+id/button71"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button72"
+        android:layout_above="@+id/button71"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
 
 </RelativeLayout>
 <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_seventh.xml -->

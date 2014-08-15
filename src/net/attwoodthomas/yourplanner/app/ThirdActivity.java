@@ -116,6 +116,14 @@ public class ThirdActivity extends Activity {
                 mPeriod5.setHint("Period 5");
                 mPeriod6.setHint("Period 6");
                 mPeriod7.setHint("Period 7");
+
+                mPeriod1.setText("");
+                mPeriod2.setText("");
+                mPeriod3.setText("");
+                mPeriod4.setText("");
+                mPeriod5.setText("");
+                mPeriod6.setText("");
+                mPeriod7.setText("");
             }
 
 

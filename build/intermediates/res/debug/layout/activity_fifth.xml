@@ -59,9 +59,18 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="Add and Go Home"
         android:id="@+id/button51"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add and Go Back"
+        android:id="@+id/button52"
+        android:layout_above="@+id/button51"
         android:layout_centerHorizontal="true"
         />
 

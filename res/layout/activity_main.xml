@@ -100,7 +100,7 @@
                 android:id="@+id/radioButton3"
                 android:checked="true"
                 android:button="@drawable/custom_radio_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#fff"/>
 
             <RadioButton
@@ -110,7 +110,7 @@
                 android:id="@+id/radioButton4"
                 android:checked="false"
                 android:button="@drawable/custom_radio_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#fff"/>
 
             <RadioButton
@@ -120,7 +120,7 @@
                 android:id="@+id/radioButton5"
                 android:checked="false"
                 android:button="@drawable/custom_radio_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#fff"/>
 
             <RadioButton
@@ -130,7 +130,7 @@
                 android:id="@+id/radioButton6"
                 android:checked="false"
                 android:button="@drawable/custom_radio_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#fff"/>
 
             <RadioButton
@@ -140,7 +140,7 @@
                 android:id="@+id/radioButton7"
                 android:checked="false"
                 android:button="@drawable/custom_radio_button"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:textColor="#fff"/>
 
         </RadioGroup>
@@ -153,7 +153,8 @@
 
                     android:text="Check Timetable"
                     android:id="@+id/button"
-                    android:layout_above="@+id/button2"/>
+                    android:layout_above="@+id/button2"
+                    android:layout_marginBottom="10dp"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -161,7 +162,8 @@
 
                     android:text="Update Timetable"
                     android:id="@+id/button2"
-                    android:layout_above="@+id/button3"/>
+                    android:layout_above="@+id/button3"
+                    android:layout_marginBottom="10dp"/>
 
                 <Button
                     android:layout_width="match_parent"

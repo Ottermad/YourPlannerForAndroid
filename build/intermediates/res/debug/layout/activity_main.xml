@@ -153,7 +153,8 @@
 
                     android:text="Check Timetable"
                     android:id="@+id/button"
-                    android:layout_above="@+id/button2"/>
+                    android:layout_above="@+id/button2"
+                    android:layout_marginBottom="10dp"/>
 
                 <Button
                     android:layout_width="match_parent"
@@ -161,7 +162,8 @@
 
                     android:text="Update Timetable"
                     android:id="@+id/button2"
-                    android:layout_above="@+id/button3"/>
+                    android:layout_above="@+id/button3"
+                    android:layout_marginBottom="10dp"/>
 
                 <Button
                     android:layout_width="match_parent"

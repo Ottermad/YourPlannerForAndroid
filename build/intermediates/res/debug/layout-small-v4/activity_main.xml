@@ -51,6 +51,7 @@
                 android:id="@+id/radioButton"
                 android:layout_weight="1.0"
                 android:checked="true"
+                android:textSize="12sp"
                 android:button="@drawable/custom_radio_button"
                 android:layout_marginTop="10dp"/>
 
@@ -58,6 +59,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Week B"
+                android:textSize="12sp"
                 android:id="@+id/radioButton2"
                 android:layout_weight="1.0"
                 android:button="@drawable/custom_radio_button"

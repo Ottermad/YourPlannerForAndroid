@@ -28,11 +28,21 @@
         android:layout_alignParentStart="true"
         android:paddingTop="@dimen/activity_vertical_margin"/>
 
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView32"
+        android:layout_above="@+id/button31"
+        android:id="@+id/scrollView" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/editText"
-                android:layout_below="@+id/textView32"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:text=""
@@ -108,7 +118,9 @@
                 android:hint="Period 7"
                 android:paddingTop="@dimen/activity_vertical_margin"
                 android:textColor="#FFFFFF"/>
+        </RelativeLayout>
 
+    </ScrollView>
 
 
 
@@ -141,4 +153,4 @@
 
 
 </RelativeLayout>
-<!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_third.xml -->
+<!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/layout-small/activity_third.xml -->
