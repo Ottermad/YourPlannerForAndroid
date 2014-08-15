@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    >
 
      <LinearLayout
         android:orientation="vertical"
@@ -42,7 +43,10 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:orientation="horizontal"
-            android:id="@+id/radioGroup">
+            android:id="@+id/radioGroup"
+
+
+            >
 
             <RadioButton
                 android:layout_width="wrap_content"
@@ -50,14 +54,22 @@
                 android:text="Week A"
                 android:id="@+id/radioButton"
                 android:layout_weight="1.0"
-                android:checked="true"/>
+                android:checked="true"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"
+
+                />
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Week B"
                 android:id="@+id/radioButton2"
-                android:layout_weight="1.0"/>
+                android:layout_weight="1.0"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
         </RadioGroup>
 
         <TextView
@@ -68,7 +80,9 @@
             android:id="@+id/textView3"
             android:layout_below="@+id/radioGroup"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            />
 
         <RadioGroup
             android:layout_width="fill_parent"
@@ -76,42 +90,58 @@
             android:layout_below="@+id/textView3"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:id="@+id/radioGroup2">
+            android:id="@+id/radioGroup2"
+            >
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Monday"
                 android:id="@+id/radioButton3"
-                android:checked="true"/>
+                android:checked="true"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Tuesday"
                 android:id="@+id/radioButton4"
-                android:checked="false" />
+                android:checked="false"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Wednesday"
                 android:id="@+id/radioButton5"
-                android:checked="false" />
+                android:checked="false"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Thursday"
                 android:id="@+id/radioButton6"
-                android:checked="false" />
+                android:checked="false"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Friday"
                 android:id="@+id/radioButton7"
-                android:checked="false" />
+                android:checked="false"
+                android:button="@drawable/custom_radio_button"
+                android:layout_marginTop="10dp"
+                android:textColor="#fff"/>
 
         </RadioGroup>
     </LinearLayout>

@@ -16,7 +16,8 @@
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -26,14 +27,25 @@
         android:layout_below="@+id/textView2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
+        android:text="Add and Go Home"
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add and Go Back"
+        android:id="@+id/button2"
+        android:layout_above="@+id/button"
+        android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
         />
 

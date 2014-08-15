@@ -16,18 +16,30 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">#2EB8E6
+        </item>
+
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:buttonStyle">@style/ButtonText</item>
+
+
 
     </style>
 
-   <!-- <style name="CustomRadio" parent="android:Widget.CompoundButton.RadioButton">
-        <item name="android:background">#FFFFFF</item>
+    <style name="ButtonText" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btn</item><!-- only way to change this is to change the src image -->
+        <item name="android:layout_width">80.0dp</item>
+        <item name="android:layout_height">40.0dp</item>
+
     </style>
 
 
-        <style name="MyCustomTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
-            <item name="android:background">#ff8affc9</item>
-            <item name="android:radioButtonStyle">@style/CustomRadio</item>
-        </style>-->
+        <!--
+         <style name="MyCustomTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+             <item name="android:background">#ff8affc9</item>
+             <item name="android:radioButtonStyle">@style/CustomRadio</item>
+         </style>-->
 
 
 </resources>

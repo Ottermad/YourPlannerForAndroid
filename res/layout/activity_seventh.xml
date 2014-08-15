@@ -11,12 +11,12 @@
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@android:id/list"
+        android:id="@+id/"
         android:layout_alignParentTop="false"
         android:layout_below="@+id/textView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/button71" />
+        android:layout_above="@+id/button72" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -39,9 +39,19 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back"
+        android:text="Home"
         android:id="@+id/button71"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button72"
+        android:layout_above="@+id/button71"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"/>
+
 
 </RelativeLayout>

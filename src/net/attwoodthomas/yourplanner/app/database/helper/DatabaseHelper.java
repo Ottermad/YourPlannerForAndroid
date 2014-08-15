@@ -25,7 +25,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     // Create Tables and insert data if need be
     public void onCreate(SQLiteDatabase paramSQLiteDatabase) {
         // Create Table lessons to store people's timetable
-        paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
+        paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20), Period7 VARCHAR(20));");
 
         // Create Table homework to store people's homework
         paramSQLiteDatabase.execSQL("CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
@@ -48,7 +48,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return;
         } else {
             Log.d("DatabaseHelper", "emtpy");
-            paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music');");
+            paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama','Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading','Drama', 'Drama', 'Music'),('A', 'Wednesday','Drama', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'Drama','SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE','SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Drama','Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'Drama','PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Drama', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE','Drama', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE','Drama', 'Reading', 'Drama', 'Music');");
         }
 
         // Check if homwork is not populated if so insert dummy data
@@ -70,7 +70,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase paramSQLiteDatabase, int paramInt1, int paramInt2)
     {
         // Remove then recreate tables
-        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20));");
+        paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20), Period7 VARCHAR(20));");
         paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
         paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
         paramSQLiteDatabase.execSQL("DROP TABLE IF EXISTS CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
@@ -183,7 +183,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
         String[] arrayOfString = {MainActivity.mWeek, MainActivity.mDay};
-        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT Period1, Period2, Period3, Period4, Period5, Period6 FROM lessons WHERE Week = ? AND day = ?", arrayOfString);
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT Period1, Period2, Period3, Period4, Period5, Period6, Period7 FROM lessons WHERE Week = ? AND day = ?", arrayOfString);
         Log.d("DatabaseHelper", "1");
         localCursor.moveToNext();
         Log.d("DatabaseHelper", "2");
@@ -199,14 +199,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Log.d("DatabaseHelper", "7");
         net.attwoodthomas.yourplanner.app.SecondActivity.period6 = localCursor.getString(localCursor.getColumnIndex("Period6"));
         Log.d("DatabaseHelper", "8");
+        net.attwoodthomas.yourplanner.app.SecondActivity.period7 = localCursor.getString(localCursor.getColumnIndex("Period7"));
+        Log.d("DatabaseHelper", "9");
         localCursor.close();
     }
 
-    public void updateLessons(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8)
+    public void updateLessons(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8, String paramString9)
     {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
         String str1 = "DELETE FROM lessons WHERE week = '" + paramString1 + "' AND day = '" + paramString2 + "';";
-        String str2 = "INSERT INTO lessons VALUES ('" + paramString1 + "', '" + paramString2 + "', '" + paramString3 + "', '" + paramString4 + "', '" + paramString5 + "', '" + paramString6 + "', '" + paramString7 + "', '" + paramString8 + "');";
+        String str2 = "INSERT INTO lessons VALUES ('" + paramString1 + "', '" + paramString2 + "', '" + paramString3 + "', '" + paramString4 + "', '" + paramString5 + "', '" + paramString6 + "', '" + paramString7 + "', '" + paramString8 + "', '" + paramString9 + "');";
         localSQLiteDatabase.execSQL(str1);
         localSQLiteDatabase.execSQL(str2);
     }

@@ -15,10 +15,16 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int btn=0x7f020000;
+        public static final int btnsmall=0x7f020001;
+        public static final int button_text_color=0x7f020002;
+        public static final int checked=0x7f020003;
+        public static final int custom_radio_button=0x7f020004;
+        public static final int ic_launcher=0x7f020005;
+        public static final int unchecked=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f080034;
+        public static final int action_settings=0x7f080035;
         public static final int button=0x7f080004;
         public static final int button2=0x7f08000f;
         public static final int button21=0x7f080028;
@@ -38,6 +44,7 @@ public final class R {
         public static final int editText51=0x7f08000c;
         public static final int editText53=0x7f08000d;
         public static final int editText6=0x7f080033;
+        public static final int editText7=0x7f080034;
         public static final int radioButton=0x7f080014;
         public static final int radioButton2=0x7f080015;
         public static final int radioButton3=0x7f080017;
@@ -131,8 +138,7 @@ public final class R {
  API 14 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f060000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
         public static final int AppTheme=0x7f060001;
+        public static final int ButtonText=0x7f060002;
     }
 }

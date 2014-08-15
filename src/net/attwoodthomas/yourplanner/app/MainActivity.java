@@ -51,30 +51,30 @@ public class MainActivity extends Activity {
 
                 // Set Week Variable
                 System.out.println(weekGroup.getCheckedRadioButtonId());
-                if (weekGroup.getCheckedRadioButtonId() == 2131165262) {
+                if (weekGroup.getCheckedRadioButtonId() == 2131230740) {
                     mWeek = "A";
                 }
 
-                else if (weekGroup.getCheckedRadioButtonId() == 2131165263) {
+                else if (weekGroup.getCheckedRadioButtonId() == 2131230741) {
                     mWeek = "B";
 
                 }
 
                 // Set Day Variable
                 System.out.println(dayGroup.getCheckedRadioButtonId());
-                if (dayGroup.getCheckedRadioButtonId() == 2131165265) {
+                if (dayGroup.getCheckedRadioButtonId() == 2131230743) {
                     mDay = "Monday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165266) {
+                else if (dayGroup.getCheckedRadioButtonId() == 2131230744) {
                     mDay = "Tuesday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165267) {
+                else if (dayGroup.getCheckedRadioButtonId() == 2131230745) {
                     mDay = "Wednesday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165268) {
+                else if (dayGroup.getCheckedRadioButtonId() == 2131230746) {
                     mDay = "Thursday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165269) {
+                else if (dayGroup.getCheckedRadioButtonId() == 2131230747) {
                     mDay = "Friday";
                 }
 

@@ -17,7 +17,8 @@ public class FifthActivity extends Activity {
     private EditText mSubject;
     private EditText mDate;
     private EditText mDescription;
-    private Button mAddButton;
+    private Button mHomeButton;
+    private Button mBackButton;
 
     private String TAG = "Fifth Activity";
 
@@ -29,21 +30,22 @@ public class FifthActivity extends Activity {
 		mSubject = (EditText) findViewById(R.id.editText51);
         mDate = (EditText) findViewById(R.id.editText2);
         mDescription = (EditText) findViewById(R.id.editText53);
-        mAddButton = (Button) findViewById(R.id.button51);
+        mHomeButton = (Button) findViewById(R.id.button51);
+        mBackButton = (Button) findViewById(R.id.button52);
 
-        mAddButton.setOnClickListener(new View.OnClickListener() {
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String subjectValue = mSubject.getText().toString();
                 String dateValue = mDate.getText().toString();
                 String descriptionValue = mDescription.getText().toString();
 
-                if (subjectValue.isEmpty() || dateValue.isEmpty() || descriptionValue.isEmpty() ) {
+                if (subjectValue.isEmpty() || dateValue.isEmpty() || descriptionValue.isEmpty()) {
                     // TODO: Create a AlertDialog
-                    AlertDialog.Builder builder= new AlertDialog.Builder(FifthActivity.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(FifthActivity.this);
                     builder.setMessage("Please enter a value for all fields")
                             .setTitle("Opps!")
-                            .setPositiveButton(android.R.string.ok,null);
+                            .setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
 
@@ -53,6 +55,30 @@ public class FifthActivity extends Activity {
                     startActivity(intent);
                 }
 
+            }
+        });
+
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String subjectValue = mSubject.getText().toString();
+                String dateValue = mDate.getText().toString();
+                String descriptionValue = mDescription.getText().toString();
+
+                if (subjectValue.isEmpty() || dateValue.isEmpty() || descriptionValue.isEmpty()) {
+                    // TODO: Create a AlertDialog
+                    AlertDialog.Builder builder = new AlertDialog.Builder(FifthActivity.this);
+                    builder.setMessage("Please enter a value for all fields")
+                            .setTitle("Opps!")
+                            .setPositiveButton(android.R.string.ok, null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+
+                } else {
+                    db.addHomework(subjectValue, dateValue, descriptionValue);
+                    Intent intent = new Intent(FifthActivity.this, HomeworkActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 	}

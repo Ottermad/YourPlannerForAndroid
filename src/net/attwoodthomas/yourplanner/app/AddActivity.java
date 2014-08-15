@@ -17,7 +17,8 @@ public class AddActivity extends Activity {
 	// Widgets
     private EditText mAmount;
     private EditText mCode;
-    private Button mSubmit;
+    private Button mHome;
+    private Button mBack;
     public DatabaseHelper db = new DatabaseHelper(this);
 
 	@Override
@@ -26,20 +27,21 @@ public class AddActivity extends Activity {
 		setContentView(R.layout.activity_add);
 		
 		mAmount = (EditText) findViewById(R.id.editText);
-        mSubmit = (Button) findViewById(R.id.button);
+        mHome = (Button) findViewById(R.id.button);
         mCode = (EditText) findViewById(R.id.editText2);
+        mBack = (Button) findViewById(R.id.button2);
 
-        mSubmit.setOnClickListener(new View.OnClickListener() {
+        mHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String amountValue = mAmount.getText().toString();
                 String codeValue = mCode.getText().toString();
                 if (amountValue.isEmpty() || codeValue.isEmpty()) {
                     // TODO: Create a AlertDialog
-                    AlertDialog.Builder builder= new AlertDialog.Builder(AddActivity.this);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AddActivity.this);
                     builder.setMessage("Please enter a value for all fields")
                             .setTitle("Opps!")
-                            .setPositiveButton(android.R.string.ok,null);
+                            .setPositiveButton(android.R.string.ok, null);
                     AlertDialog dialog = builder.create();
                     dialog.show();
                 } else {
@@ -62,6 +64,45 @@ public class AddActivity extends Activity {
                     }
 
                     Intent intent = new Intent(AddActivity.this, HomeActivity.class);
+                    startActivity(intent);
+                }
+
+            }
+        });
+
+        mBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String amountValue = mAmount.getText().toString();
+                String codeValue = mCode.getText().toString();
+                if (amountValue.isEmpty() || codeValue.isEmpty()) {
+                    // TODO: Create a AlertDialog
+                    AlertDialog.Builder builder = new AlertDialog.Builder(AddActivity.this);
+                    builder.setMessage("Please enter a value for all fields")
+                            .setTitle("Opps!")
+                            .setPositiveButton(android.R.string.ok, null);
+                    AlertDialog dialog = builder.create();
+                    dialog.show();
+                } else {
+
+                    if (db.addMerits(codeValue, amountValue) == true) {
+                        Context context = getApplicationContext();
+                        CharSequence text = "Success :)";
+                        int duration = Toast.LENGTH_LONG;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+
+                    } else {
+                        Context context = getApplicationContext();
+                        CharSequence text = "Failed :(";
+                        int duration = Toast.LENGTH_LONG;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    }
+
+                    Intent intent = new Intent(AddActivity.this, MeritsActivity.class);
                     startActivity(intent);
                 }
 

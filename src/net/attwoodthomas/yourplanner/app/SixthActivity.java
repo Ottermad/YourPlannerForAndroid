@@ -12,11 +12,12 @@ import android.widget.TextView;
 public class SixthActivity extends Activity {
 	
 	// Widgets
-    TextView subjectView;
-    TextView dateView;
-    TextView descriptionView;
-    Button backButton;
-    Button deleteButton;
+    private TextView mSubjectView;
+    private TextView mDateView;
+    private TextView mDescriptionView;
+    private Button mHomeButton;
+    private Button mBackButton;
+    private Button mDeleteButton;
     public DatabaseHelper db = new DatabaseHelper(this);
 
 	@Override
@@ -24,12 +25,14 @@ public class SixthActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_sixth);
 		
-        subjectView = (TextView) findViewById(R.id.textView61);
-        dateView = (TextView) findViewById(R.id.textView62);
-        descriptionView = (TextView) findViewById(R.id.textView63);
-        backButton = (Button) findViewById(R.id.button);
+        mSubjectView = (TextView) findViewById(R.id.textView61);
+        mDateView = (TextView) findViewById(R.id.textView62);
+        mDescriptionView = (TextView) findViewById(R.id.textView63);
+        mHomeButton = (Button) findViewById(R.id.button);
+        mDeleteButton = (Button) findViewById(R.id.button2);
+        mBackButton = (Button) findViewById(R.id.button3);
 
-        backButton.setOnClickListener(new View.OnClickListener() {
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SixthActivity.this, HomeActivity.class);
@@ -37,13 +40,21 @@ public class SixthActivity extends Activity {
             }
         });
 
-        deleteButton = (Button) findViewById(R.id.button2);
-        deleteButton.setOnClickListener(new View.OnClickListener() {
+
+        mDeleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String[] data = {subjectView.getText().toString(), dateView.getText().toString(), descriptionView.getText().toString()};
+                String[] data = {mSubjectView.getText().toString(), mDateView.getText().toString(), mDescriptionView.getText().toString()};
                 db.deleteHomework(data);
-                Intent intent = new Intent(SixthActivity.this, HomeActivity.class);
+                Intent intent = new Intent(SixthActivity.this, HomeworkActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SixthActivity.this, HomeworkActivity.class);
                 startActivity(intent);
             }
         });
@@ -55,9 +66,9 @@ public class SixthActivity extends Activity {
 	        String subject = FourthActivity.mHomeworkDue.get(pos).get("Subject");
 	        String date = FourthActivity.mHomeworkDue.get(pos).get("DueDate");
 	        String[] data =  new DatabaseHelper(this).returnAllValues(subject, date);
-	        subjectView.setText(data[0]);
-	        dateView.setText(data[1]);
-	        descriptionView.setText(data[2]);
+	        mSubjectView.setText(data[0]);
+	        mDateView.setText(data[1]);
+	        mDescriptionView.setText(data[2]);
 
 	    }
 

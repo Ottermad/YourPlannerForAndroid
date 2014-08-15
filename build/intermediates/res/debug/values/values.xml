@@ -38,8 +38,18 @@
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme">
-        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
 
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">#2EB8E6</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:buttonStyle">@style/ButtonText</item>
+    </style>
+
+    <style name="ButtonText" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btn</item> <!-- only way to change this is to change the src image -->
+        <item name="android:layout_width">80.0dp</item>
+        <item name="android:layout_height">40.0dp</item>
     </style>
 
 </resources>

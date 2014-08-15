@@ -4,9 +4,29 @@
     <dataSet config="main" >
         <source path="/Users/Shared/EclipseProjects/YourPlanner/res" >
             <file
+                name="button_text_color"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable/button_text_color.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
+                name="custom_radio_button"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable/custom_radio_button.xml"
+                qualifiers=""
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-hdpi/ic_launcher.png"
                 qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="btn"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-mdpi/btn.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="btnsmall"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-mdpi/btnsmall.png"
+                qualifiers="mdpi-v4"
                 type="drawable" />
             <file
                 name="ic_launcher"
@@ -19,8 +39,23 @@
                 qualifiers="xhdpi-v4"
                 type="drawable" />
             <file
+                name="btn"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xxhdpi/btn.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="checked"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xxhdpi/checked.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
                 name="ic_launcher"
                 path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xxhdpi/ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="unchecked"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/drawable-xxhdpi/unchecked.png"
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
@@ -224,11 +259,36 @@
                 </style>
 
                 <style
+                    name="ButtonText"
+                    parent="@android:style/Widget.Button" >
+                    <item name="android:textColor">
+#FFFFFF
+                    </item>
+                    <item name="android:background">
+@drawable/btn
+                    </item> <!-- only way to change this is to change the src image -->
+                    <item name="android:layout_width">
+80.0dp
+                    </item>
+                    <item name="android:layout_height">
+40.0dp
+                    </item>
+                </style>
+
+                <style
                     name="AppTheme"
                     parent="AppBaseTheme" >
 
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-
+                    <item name="android:background">
+#2EB8E6
+                    </item>
+                    <item name="android:textColor">
+#FFFFFF
+                    </item>
+                    <item name="android:buttonStyle">
+@style/ButtonText
+                    </item>
                 </style>
             </file>
             <file

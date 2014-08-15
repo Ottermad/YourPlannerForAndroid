@@ -37,7 +37,8 @@
         android:layout_alignParentStart="true"
         android:text=""
         android:hint="Period 1"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -47,7 +48,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Period 2"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -57,7 +59,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Period 3"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:layout_width="match_parent"
@@ -67,7 +70,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Period 4"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:layout_width="match_parent"
@@ -77,7 +81,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:paddingTop="@dimen/activity_vertical_margin"
+
+
         />
 
     <EditText
@@ -88,7 +93,10 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Period 5"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"
+
+        />
 
     <EditText
         android:layout_width="match_parent"
@@ -98,7 +106,19 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:hint="Period 6"
-        android:paddingTop="@dimen/activity_vertical_margin"/>
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText7"
+        android:layout_below="@+id/editText6"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:hint="Period 7"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:textColor="#FFFFFF"/>
 
 </RelativeLayout>
 <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_third.xml -->

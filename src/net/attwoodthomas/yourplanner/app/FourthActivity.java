@@ -19,19 +19,29 @@ public class FourthActivity extends ListActivity {
 	    private String TAG = "Foruth Activity";
 	    public static Intent intent;
 	    public static int pos = 0;
-	    private Button mBackButton;
+	    private Button mHomeButton;
+        private Button mBackButton;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_fourth);
 		
-		mBackButton = (Button) findViewById(R.id.button);
+		mHomeButton = (Button) findViewById(R.id.button);
+        mBackButton  = (Button) findViewById(R.id.button2);
 
-        mBackButton.setOnClickListener(new View.OnClickListener() {
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(FourthActivity.this, HomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FourthActivity.this, HomeworkActivity.class);
                 startActivity(intent);
             }
         });

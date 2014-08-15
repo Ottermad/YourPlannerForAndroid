@@ -15,7 +15,10 @@ public class SpendActivity extends Activity {
 	
 	// Widgets
     private EditText mAmount;
-    private Button mSubmit;
+    private Button mSubmitHomeButton;
+    private Button mSubmitBackButton;
+    private Button mHomeButton;
+    private Button mBackButton;
     public DatabaseHelper db = new DatabaseHelper(this);
 
 	@Override
@@ -24,35 +27,69 @@ public class SpendActivity extends Activity {
 		setContentView(R.layout.activity_spend);
 		
 		mAmount = (EditText) findViewById(R.id.editText);
-        mSubmit = (Button) findViewById(R.id.button);
+        mSubmitHomeButton = (Button) findViewById(R.id.button);
+        mSubmitBackButton = (Button) findViewById(R.id.button2);
+        mBackButton = (Button) findViewById(R.id.button3);
+        mHomeButton = (Button) findViewById(R.id.button4);
 
-        mSubmit.setOnClickListener(new View.OnClickListener() {
+        mSubmitHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (db.spendMerits(mAmount.getText().toString()) == true) {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Success :)";
-                    int duration = Toast.LENGTH_LONG;
+                spendMerits();
 
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-
-                } else {
-                    Context context = getApplicationContext();
-                    CharSequence text = "Failed :(";
-                    int duration = Toast.LENGTH_LONG;
-
-                    Toast toast = Toast.makeText(context, text, duration);
-                    toast.show();
-                }
-
-                Intent intent = new Intent(SpendActivity.this, MainActivity.class);
+                Intent intent = new Intent(SpendActivity.this, HomeActivity.class);
                 startActivity(intent);
 
+            }
+
+
+        });
+
+        mSubmitBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                spendMerits();
+                Intent intent = new Intent(SpendActivity.this, MeritsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SpendActivity.this, MeritsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SpendActivity.this, HomeActivity.class);
+                startActivity(intent);
             }
         });
 
 	}
+
+    private void spendMerits() {
+        if (db.spendMerits(mAmount.getText().toString()) == true) {
+            Context context = getApplicationContext();
+            CharSequence text = "Success :)";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+
+        } else {
+            Context context = getApplicationContext();
+            CharSequence text = "Failed :(";
+            int duration = Toast.LENGTH_LONG;
+
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
+        }
+    }
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

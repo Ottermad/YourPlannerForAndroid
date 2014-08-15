@@ -20,6 +20,7 @@ public class SeventhActivity extends ListActivity {
     private String TAG = "Foruth Activity";
     public static Intent intent;
     public static int pos = 0;
+    private Button mHomeButton;
     private Button mBackButton;
 
 	@Override
@@ -27,13 +28,23 @@ public class SeventhActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_seventh);
 		
-		mBackButton = (Button) findViewById(R.id.button71);
+		mHomeButton = (Button) findViewById(R.id.button71);
+        mBackButton = (Button) findViewById(R.id.button72);
 
-        mBackButton.setOnClickListener(new View.OnClickListener() {
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SeventhActivity.this, HomeActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        mBackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SeventhActivity.this, HomeworkActivity.class);
+                startActivity(intent);
+
             }
         });
 

@@ -17,6 +17,7 @@ public class EigthActivity extends Activity {
     TextView descriptionView;
     Button backButton;
     Button deleteButton;
+    private Button mHomeButton;
     public DatabaseHelper db = new DatabaseHelper(this);
 
 	@Override
@@ -27,7 +28,9 @@ public class EigthActivity extends Activity {
 		subjectView = (TextView) findViewById(R.id.textView81);
         dateView = (TextView) findViewById(R.id.textView82);
         descriptionView = (TextView) findViewById(R.id.textView83);
-        backButton = (Button) findViewById(R.id.button81);
+        backButton = (Button) findViewById(R.id.button83);
+        deleteButton = (Button) findViewById(R.id.button82);
+        mHomeButton = (Button) findViewById(R.id.button81);
 
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,12 +40,20 @@ public class EigthActivity extends Activity {
             }
         });
 
-        deleteButton = (Button) findViewById(R.id.button82);
+
         deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String[] data = {subjectView.getText().toString(), dateView.getText().toString(), descriptionView.getText().toString()};
                 db.deleteHomeworkForever(data);
+                Intent intent = new Intent(EigthActivity.this, SeventhActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        mHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(EigthActivity.this, HomeActivity.class);
                 startActivity(intent);
             }
