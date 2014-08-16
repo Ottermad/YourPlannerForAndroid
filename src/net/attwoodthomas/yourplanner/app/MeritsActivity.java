@@ -36,7 +36,7 @@ public class MeritsActivity extends Activity {
         mBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MeritsActivity.this, HomeworkActivity.class);
+                Intent intent = new Intent(MeritsActivity.this, HomeActivity.class);
                 startActivity(intent);
 
             }

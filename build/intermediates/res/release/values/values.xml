@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/dimens.xml -->
+    <eat-comment />
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/strings.xml -->
+    <eat-comment />
+
+    <string name="action_settings">Settings</string>
+    <string name="app_name">YourPlanner</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="title_activity_eight">EightActivity</string>
+    <string name="title_activity_eigth">EigthActivity</string>
+    <string name="title_activity_fifth">FifthActivity</string>
+    <string name="title_activity_fourth">FourthActivity</string>
+    <string name="title_activity_homework">HomeworkActivity</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_merits">MeritsActivity</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="title_activity_seventh">SeventhActivity</string>
+    <string name="title_activity_sixth">SixthActivity</string>
+    <string name="title_activity_spend">SpendActivity</string>
+    <string name="title_activity_third">ThirdActivity</string>
+    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+
+    </style>
+
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:background">#2EB8E6</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:buttonStyle">@style/ButtonText</item>
+    </style>
+
+    <style name="ButtonText" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btn</item> <!-- only way to change this is to change the src image -->
+        <item name="android:layout_width">80.0dp</item>
+        <item name="android:layout_height">40.0dp</item>
+    </style>
+
+</resources>

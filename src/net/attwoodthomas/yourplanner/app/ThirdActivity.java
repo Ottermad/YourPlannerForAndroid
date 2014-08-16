@@ -58,8 +58,7 @@ public class ThirdActivity extends Activity {
             @Override
             public void onClick(View view) {
 
-                String dayValue = ThirdActivity.this.mDay;
-                String weekValue = ThirdActivity.this.mWeek;
+
                 String period1Value = ThirdActivity.this.mPeriod1.getText().toString();
                 String period2Value = ThirdActivity.this.mPeriod2.getText().toString();
                 String period3Value = ThirdActivity.this.mPeriod3.getText().toString();
@@ -98,6 +97,9 @@ public class ThirdActivity extends Activity {
                     day = "Monday";
 
                 }
+
+                String dayValue = ThirdActivity.this.mDay;
+                String weekValue = ThirdActivity.this.mWeek;
 
                 ThirdActivity.this.db.updateLessons(weekValue, dayValue, period1Value, period2Value, period3Value, period4Value, period5Value, period6Value, period7Value);
 

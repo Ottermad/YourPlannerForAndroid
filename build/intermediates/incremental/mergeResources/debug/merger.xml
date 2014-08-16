@@ -235,9 +235,9 @@
                 </string>
                 <string name="title_activity_sixth" >SixthActivity
                 </string>
-                <string name="title_activity_add" >AddActivity
-                </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="title_activity_add" >AddActivity
                 </string>
                 <string name="title_activity_fifth" >FifthActivity
                 </string>

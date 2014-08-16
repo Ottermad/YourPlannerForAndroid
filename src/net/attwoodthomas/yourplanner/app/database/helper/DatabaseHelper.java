@@ -62,7 +62,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
         // Check if codes is not populated if so insert dummy data
-        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM homework", null).moveToFirst()) {
+        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM codes", null).moveToFirst()) {
             paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
         }
     }
@@ -229,6 +229,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean addMerits(String code, String amount) {
+
         String total_merits = "";
         String used_merits = "";
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
@@ -251,6 +252,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
 
+        System.out.println(code);
+
+        try {
+            System.out.println(localCursor.getString(0));
+
+        } catch (Exception e) {
+            localSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
+        }
+
+        System.out.println(code.equals(localCursor.getString(0)));
         Log.d("TAG", total_merits);
         Log.d("TAG", used_merits);
 
