@@ -2,10 +2,22 @@
 <pre-dex-items>
 
     <item
+        dex="/Users/Shared/EclipseProjects/YourPlanner/build/intermediates/pre-dexed/debug/classes-adebd65f1278af1490f69dcd8b467c2c31c63534.jar"
+        jar="/Users/Shared/EclipseProjects/YourPlanner/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
         dex="/Users/Shared/EclipseProjects/YourPlanner/build/intermediates/pre-dexed/debug/android-support-v4-4e99bb8ff09fc7518a16a5fdcece0c92100096bc.jar"
         jar="/Users/Shared/EclipseProjects/YourPlanner/libs/android-support-v4.jar"
         jumboMode="false"
         revision="19.1.0"
         sha1="5896b0a4e377ac4242eb2bc785220c1c4fc052f4"/>
+    <item
+        dex="/Users/Shared/EclipseProjects/YourPlanner/build/intermediates/pre-dexed/debug/support-v4-19.1.0-fe930dc68beb1e566675ce71b270d4091c6c249b.jar"
+        jar="/Applications/Android Studio.app/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
 
 </pre-dex-items>

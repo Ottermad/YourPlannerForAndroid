@@ -10,6 +10,7 @@ apply plugin: 'com.android.application'
 
 dependencies {
     compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:appcompat-v7:19.+'
 }
 
 android {
@@ -39,4 +40,9 @@ android {
         debug.setRoot('build-types/debug')
         release.setRoot('build-types/release')
     }
+
+    dexOptions {
+        preDexLibraries = false
+    }
+
 }

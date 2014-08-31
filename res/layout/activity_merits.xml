@@ -16,7 +16,8 @@
         android:layout_above="@+id/button2"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        style="@style/ButtonOrange" />
 
     <Button
         android:layout_width="match_parent"
@@ -26,7 +27,8 @@
         android:layout_above="@+id/button3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginBottom="10dp"
+        style="@style/ButtonOrange" />
 
     <Button
         android:layout_width="match_parent"
@@ -35,7 +37,8 @@
         android:id="@+id/button3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        style="@style/ButtonOrange"/>
 
     <TextView
         android:layout_width="wrap_content"

@@ -5,8 +5,15 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
+        android:minSdkVersion="11"
         android:targetSdkVersion="19" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,7 +24,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name="net.attwoodthomas.yourplanner.app.HomeActivity"
-            android:label="@string/app_name" >
+            android:configChanges="orientation"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,51 +35,81 @@
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.MainActivity"
-            android:label="@string/title_activity_main" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.SecondActivity"
-            android:label="@string/title_activity_second" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_second"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.ThirdActivity"
-            android:label="@string/title_activity_third" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_third"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.FourthActivity"
-            android:label="@string/title_activity_fourth" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_fourth"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.FifthActivity"
-            android:label="@string/title_activity_fifth" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_fifth"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.SixthActivity"
-            android:label="@string/title_activity_sixth" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_sixth"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.SeventhActivity"
-            android:label="@string/title_activity_seventh" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_seventh"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.EigthActivity"
-            android:label="@string/title_activity_eigth" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_eigth"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.HomeworkActivity"
-            android:label="@string/title_activity_homework" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_homework"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.MeritsActivity"
-            android:label="@string/title_activity_merits" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_merits"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.AddActivity"
-            android:label="@string/title_activity_add" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_add"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name="net.attwoodthomas.yourplanner.app.SpendActivity"
-            android:label="@string/title_activity_spend" >
+            android:configChanges="orientation"
+            android:label="@string/title_activity_spend"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="net.attwoodthomas.yourplanner.app.NameActivity"
+            android:configChanges="orientation"
+            android:label="@string/title_activity_name"
+            android:screenOrientation="portrait" >
         </activity>
     </application>
 

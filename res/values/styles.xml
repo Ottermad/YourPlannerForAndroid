@@ -4,7 +4,7 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+    <style name="AppBaseTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -16,23 +16,42 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:background">#2EB8E6
+        <item name="android:background">#3C4952
         </item>
 
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:buttonStyle">@style/ButtonText</item>
+
 
 
 
     </style>
 
-    <style name="ButtonText" parent="@android:style/Widget.Button">
+
+
+    <style name="ButtonBlue" parent="@android:style/Widget.Button">
         <item name="android:textColor">#FFFFFF</item>
-        <item name="android:background">@drawable/btn</item><!-- only way to change this is to change the src image -->
+        <item name="android:background">@drawable/btnblue</item><!-- only way to change this is to change the src image -->
         <item name="android:layout_width">80.0dp</item>
-        <item name="android:layout_height">40.0dp</item>
+        <item name="android:layout_height">180.0dp</item>
 
     </style>
+
+    <style name="ButtonGreen" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btngreen</item><!-- only way to change this is to change the src image -->
+        <item name="android:layout_width">80.0dp</item>
+        <item name="android:layout_height">180.0dp</item>
+
+    </style>
+
+    <style name="ButtonOrange" parent="@android:style/Widget.Button">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/btnorange</item><!-- only way to change this is to change the src image -->
+        <item name="android:layout_width">80.0dp</item>
+        <item name="android:layout_height">10.0dp</item>
+
+    </style>
+
 
 
         <!--

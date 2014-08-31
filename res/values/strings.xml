@@ -17,5 +17,6 @@
     <string name="title_activity_merits">MeritsActivity</string>
     <string name="title_activity_add">AddActivity</string>
     <string name="title_activity_spend">SpendActivity</string>
+    <string name="title_activity_name">NameActivity</string>
 
 </resources>

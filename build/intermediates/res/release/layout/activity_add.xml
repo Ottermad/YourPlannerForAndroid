@@ -37,7 +37,7 @@
         android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        />
+        style="@style/ButtonOrange" />
 
     <Button
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         android:layout_above="@+id/button"
         android:layout_marginBottom="10dp"
         android:layout_centerHorizontal="true"
-        />
+        style="@style/ButtonOrange" />
 
     <TextView
         android:layout_width="wrap_content"

@@ -123,7 +123,7 @@
         android:layout_marginBottom="10dp"
 
 
-        />
+        style="@style/ButtonBlue" />
 
 
     <Button
@@ -136,7 +136,7 @@
         android:layout_alignParentEnd="true"
 
 
-        />
+        style="@style/ButtonBlue"  />
 
 
 

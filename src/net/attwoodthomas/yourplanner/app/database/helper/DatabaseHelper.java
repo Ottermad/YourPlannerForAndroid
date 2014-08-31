@@ -42,6 +42,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // Create Table periods to store how many periods the user has in  a day
         paramSQLiteDatabase.execSQL("CREATE TABLE periods (periods VARCHAR(10));");
 
+        // Create Table name
+        paramSQLiteDatabase.execSQL("CREATE table name (name VARCHAR(50));");
+
+        // Create Table photo
+        paramSQLiteDatabase.execSQL("CREATE table photo (path VARCHAR(500));");
+
         // Check if lessons table is populated if not insert dummy data
         if (paramSQLiteDatabase.rawQuery("SELECT * FROM lessons", null).moveToFirst()) {
             Log.d("DatabaseHelper", "not emtpy");
@@ -65,6 +71,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (!paramSQLiteDatabase.rawQuery("SELECT * FROM codes", null).moveToFirst()) {
             paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
         }
+
+
     }
 
     public void onUpgrade(SQLiteDatabase paramSQLiteDatabase, int paramInt1, int paramInt2)
@@ -117,6 +125,36 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         }
 
 
+    }
+
+    public int getNumberOfHomework() {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String[] tblName  = {};
+        int total = 0;
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM homework",tblName);
+
+        localCursor.moveToFirst();
+        while (localCursor.isAfterLast() == false)
+        {
+            total = total + 1;
+            localCursor.moveToNext();
+        }
+        return total;
+    }
+
+    public int getNumberOfCompletedHomework() {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String[] tblName  = {};
+        int total = 0;
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM past_homework",tblName);
+
+        localCursor.moveToFirst();
+        while (localCursor.isAfterLast() == false)
+        {
+            total = total + 1;
+            localCursor.moveToNext();
+        }
+        return total;
     }
 
     public String[] returnAllValues(String subject, String datedue) {
@@ -339,6 +377,57 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         localSQLiteDatabase.execSQL(str1);
 
 
+    }
+
+    // Name Functions
+    public boolean checkName() {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        // Check if name is not populated if so return false
+        if (localSQLiteDatabase.rawQuery("SELECT * FROM name", null).moveToFirst()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void updateName(String name) {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        if (localSQLiteDatabase.rawQuery("SELECT * FROM name", null).moveToFirst()) {
+            localSQLiteDatabase.execSQL("DELETE FROM name");
+        }
+        localSQLiteDatabase.execSQL("INSERT INTO name VALUES ('" + name + "');");
+
+
+    }
+
+    public String getName() {
+
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String[] arrayOfString = {};
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM name", arrayOfString);
+        localCursor.moveToNext();
+        String name = localCursor.getString(localCursor.getColumnIndex("name"));
+        return name;
+
+    }
+
+    // Photo Functions
+
+    public void insertPhoto (String path) {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String str1 = "DELETE FROM photo";
+        String str2 = "INSERT INTO photo VALUES ('" + path + "');";
+        localSQLiteDatabase.execSQL(str1);
+        localSQLiteDatabase.execSQL(str2);
+    }
+
+    public String getPhotoPath() {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+        String[] arrayOfString = {};
+        Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM photo", arrayOfString);
+        localCursor.moveToNext();
+        String name = localCursor.getString(localCursor.getColumnIndex("path"));
+        return name;
     }
 
 }

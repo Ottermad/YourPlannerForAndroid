@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#3C4952" />
+    <stroke android:width="10dip" android:color="#ffffff"/>
+
+</shape><!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/drawable/circleback.xml -->
