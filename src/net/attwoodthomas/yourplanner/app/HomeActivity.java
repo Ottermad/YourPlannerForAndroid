@@ -49,7 +49,7 @@ public class HomeActivity extends Activity {
     public DatabaseHelper db = new DatabaseHelper(this);
     public String[] camera_choices = {"Take Photo"};
     private String TAG = "HomeActivity";
-    private TextView mRateUs;
+
 
 
     protected DialogInterface.OnClickListener mDialogListener = new DialogInterface.OnClickListener() {
@@ -157,20 +157,7 @@ public class HomeActivity extends Activity {
             mHomeworkDone = (TextView) findViewById(R.id.textView5);
             mTotalMerits = (TextView) findViewById(R.id.textView6);
             mImage = (ImageButton) findViewById(R.id.imageView);
-            mRateUs = (TextView) findViewById(R.id.textView3);
 
-            mRateUs.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Uri uri = Uri.parse("market://details?id=" + context.getPackageName());
-                    Intent goToMarket = new Intent(Intent.ACTION_VIEW, uri);
-                    try {
-                        startActivity(goToMarket);
-                    } catch (ActivityNotFoundException e) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + context.getPackageName())));
-                    }
-                }
-            });
 
 		 	mHomeworkButton = (Button) findViewById(R.id.button2);
 	        mTimetableButton = (Button) findViewById(R.id.button);

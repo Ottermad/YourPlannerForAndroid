@@ -18,5 +18,12 @@
     <string name="title_activity_add">AddActivity</string>
     <string name="title_activity_spend">SpendActivity</string>
     <string name="title_activity_name">NameActivity</string>
+    <string name="amount">Amount</string>
+    <string name="teacher_code_hint">Code</string>
+    <string name="merits_add_and_go_home_button">Add and Go Home</string>
+    <string name="merits_add_and_go_back_button">Add and Go Back</string>
+    <string name="merits_amount_to_add_textview">Amount to Add</string>
+    <string name="merits_teacher_code_textview">Teacher Code</string>
+    <string name="subject">Subject</string>
 
 </resources>

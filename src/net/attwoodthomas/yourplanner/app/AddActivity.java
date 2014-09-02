@@ -5,7 +5,6 @@ import net.attwoodthomas.yourplanner.app.database.helper.DatabaseHelper;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -29,7 +28,7 @@ public class AddActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_add);
+		setContentView(R.layout.activity_addmerits);
 		
 		mAmount = (EditText) findViewById(R.id.editText);
         mHome = (Button) findViewById(R.id.button);

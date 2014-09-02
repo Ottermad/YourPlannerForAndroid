@@ -23,7 +23,7 @@ public class EigthActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_eigth);
+		setContentView(R.layout.activity_indiviualcompletedhomework);
 		
 		subjectView = (TextView) findViewById(R.id.textView81);
         dateView = (TextView) findViewById(R.id.textView82);

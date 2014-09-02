@@ -8351,13 +8351,8 @@ false
                 qualifiers="xxhdpi-v4"
                 type="drawable" />
             <file
-                name="activity_add"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_add.xml"
-                qualifiers=""
-                type="layout" />
-            <file
-                name="activity_eigth"
-                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_eigth.xml"
+                name="activity_addmerits"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_addmerits.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -8378,6 +8373,11 @@ false
             <file
                 name="activity_homework"
                 path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_homework.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_indiviualcompletedhomework"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout/activity_indiviualcompletedhomework.xml"
                 qualifiers=""
                 type="layout" />
             <file
@@ -8540,19 +8540,33 @@ false
                 </string>
                 <string name="title_activity_fourth" >FourthActivity
                 </string>
+                <string name="amount" >Amount
+                </string>
                 <string name="title_activity_second" >SecondActivity
+                </string>
+                <string name="subject" >Subject
                 </string>
                 <string name="title_activity_third" >ThirdActivity
                 </string>
                 <string name="title_activity_eight" >EightActivity
                 </string>
+                <string name="merits_teacher_code_textview" >Teacher Code
+                </string>
+                <string name="merits_add_and_go_home_button" >Add and Go Home
+                </string>
+                <string name="merits_amount_to_add_textview" >Amount to Add
+                </string>
                 <string name="title_activity_merits" >MeritsActivity
+                </string>
+                <string name="merits_add_and_go_back_button" >Add and Go Back
                 </string>
                 <string name="app_name" >YourPlanner
                 </string>
                 <string name="title_activity_seventh" >SeventhActivity
                 </string>
                 <string name="title_activity_sixth" >SixthActivity
+                </string>
+                <string name="teacher_code_hint" >Code
                 </string>
                 <string name="title_activity_add" >AddActivity
                 </string>
