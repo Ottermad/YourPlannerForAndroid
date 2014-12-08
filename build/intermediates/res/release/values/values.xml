@@ -572,20 +572,21 @@
     <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/styles.xml -->
     <eat-comment />
 
-    <style name="AppBaseTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen">
+    <style name="AppBaseTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
+
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
 
+        <item name="android:editTextStyle">@style/textEntry</item>
     </style>
 
     <style name="AppTheme" parent="AppBaseTheme">
 
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
         <item name="android:background">#3C4952</item>
-        <item name="android:textColor">#FFFFFF</item>
     </style>
 
     <style name="ButtonBlue" parent="@android:style/Widget.Button">
@@ -1322,5 +1323,12 @@
     <style name="Widget.AppCompat.ProgressBar.Horizontal" parent="Widget.AppCompat.Base.ProgressBar.Horizontal" />
 
     <style name="Widget.AppCompat.Spinner.DropDown.ActionBar" parent="Widget.AppCompat.Base.Spinner" />
+    <!-- From: file:/Users/Shared/EclipseProjects/YourPlanner/res/values/styles.xml -->
+    <eat-comment />
+
+    <style name="textEntry" parent="@android:style/Widget.EditText">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/abc_textfield_search_right_default_holo_dark</item>
+    </style>
 
 </resources>

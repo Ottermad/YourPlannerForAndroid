@@ -414,13 +414,13 @@ public final class R {
 		public static final int Theme_Base = 0x7f0b0037;
 		public static final int Theme_Base_AppCompat = 0x7f0b0038;
 		public static final int Theme_Base_AppCompat_DialogWhenLarge = 0x7f0b003b;
-		public static final int Theme_Base_AppCompat_DialogWhenLarge_Base = 0x7f0b008e;
+		public static final int Theme_Base_AppCompat_DialogWhenLarge_Base = 0x7f0b008f;
 		public static final int Theme_Base_AppCompat_Dialog_FixedSize = 0x7f0b0039;
 		public static final int Theme_Base_AppCompat_Dialog_Light_FixedSize = 0x7f0b003a;
 		public static final int Theme_Base_AppCompat_Light = 0x7f0b003c;
 		public static final int Theme_Base_AppCompat_Light_DarkActionBar = 0x7f0b003d;
 		public static final int Theme_Base_AppCompat_Light_DialogWhenLarge = 0x7f0b003e;
-		public static final int Theme_Base_AppCompat_Light_DialogWhenLarge_Base = 0x7f0b008f;
+		public static final int Theme_Base_AppCompat_Light_DialogWhenLarge_Base = 0x7f0b0090;
 		public static final int Theme_Base_Light = 0x7f0b003f;
 		public static final int Widget_AppCompat_ActionBar = 0x7f0b0040;
 		public static final int Widget_AppCompat_ActionBar_Solid = 0x7f0b0041;

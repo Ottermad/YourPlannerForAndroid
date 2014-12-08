@@ -8441,6 +8441,11 @@ false
                 qualifiers="small-v4"
                 type="layout" />
             <file
+                name="activity_fifth"
+                path="/Users/Shared/EclipseProjects/YourPlanner/res/layout-v11/activity_fifth.xml"
+                qualifiers="v11"
+                type="layout" />
+            <file
                 name="add"
                 path="/Users/Shared/EclipseProjects/YourPlanner/res/menu/add.xml"
                 qualifiers=""
@@ -8598,7 +8603,7 @@ false
 
                 <style
                     name="AppBaseTheme"
-                    parent="android:Theme.Holo.NoActionBar.Fullscreen" >
+                    parent="android:Theme.Black.NoTitleBar.Fullscreen" >
 
                     <!--
             Theme customizations available in newer API levels can go in
@@ -8606,6 +8611,9 @@ false
             backward-compatibility can go here.
                     -->
 
+                    <item name="android:editTextStyle">
+@style/textEntry
+                    </item>
                 </style>
 
                 <style
@@ -8643,15 +8651,23 @@ false
                 </style>
 
                 <style
+                    name="textEntry"
+                    parent="@android:style/Widget.EditText" >
+                    <item name="android:textColor">
+@android:color/black
+                    </item>
+                    <item name="android:background">
+@drawable/abc_textfield_search_right_default_holo_dark
+                    </item>
+                </style>
+
+                <style
                     name="AppTheme"
                     parent="AppBaseTheme" >
 
                     <!-- All customizations that are NOT specific to a particular API-level can go here. -->
                     <item name="android:background">
 #3C4952
-                    </item>
-                    <item name="android:textColor">
-#FFFFFF
                     </item>
                 </style>
             </file>
@@ -8667,7 +8683,7 @@ false
 
                 <style
                     name="AppBaseTheme"
-                    parent="android:Theme.Light.NoTitleBar.Fullscreen" >
+                    parent="android:Theme.NoTitleBar.Fullscreen" >
 
                     <!-- API 11 theme customizations can go here. -->
 
@@ -8682,7 +8698,9 @@ false
                     parent="android:Theme.Holo.Light.NoActionBar.Fullscreen" >
 
                     <!-- API 14 theme customizations can go here. -->
-
+                    <item name="android:textColor">
+#FFFFFF
+                    </item>
                 </style>
             </file>
             <file

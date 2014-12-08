@@ -953,24 +953,26 @@ containing a value of this type.
         public static final int action_menu_divider=0x7f070015;
         public static final int action_menu_presenter=0x7f070016;
         public static final int action_mode_close_button=0x7f070024;
-        public static final int action_settings=0x7f070077;
+        public static final int action_settings=0x7f070079;
         public static final int activity_chooser_view_content=0x7f070025;
         public static final int always=0x7f07000f;
         public static final int beginning=0x7f07000a;
         public static final int button=0x7f070040;
         public static final int button2=0x7f070041;
-        public static final int button21=0x7f070068;
-        public static final int button3=0x7f070048;
-        public static final int button31=0x7f070075;
-        public static final int button32=0x7f070076;
-        public static final int button4=0x7f070050;
+        public static final int button21=0x7f070069;
+        public static final int button3=0x7f070049;
+        public static final int button31=0x7f070077;
+        public static final int button32=0x7f070078;
+        public static final int button33=0x7f070071;
+        public static final int button4=0x7f070051;
         public static final int button51=0x7f070046;
         public static final int button52=0x7f070047;
-        public static final int button71=0x7f07006a;
-        public static final int button72=0x7f070069;
-        public static final int button81=0x7f070054;
-        public static final int button82=0x7f070056;
-        public static final int button83=0x7f070055;
+        public static final int button71=0x7f07006b;
+        public static final int button72=0x7f07006a;
+        public static final int button81=0x7f070055;
+        public static final int button82=0x7f070057;
+        public static final int button83=0x7f070056;
+        public static final int calendarView=0x7f070048;
         public static final int checkbox=0x7f07002d;
         public static final int collapseActionView=0x7f070011;
         public static final int default_activity_button=0x7f070028;
@@ -979,13 +981,13 @@ containing a value of this type.
         public static final int dropdown=0x7f070013;
         public static final int editText=0x7f07003c;
         public static final int editText2=0x7f07003e;
-        public static final int editText3=0x7f070070;
-        public static final int editText4=0x7f070071;
-        public static final int editText5=0x7f070072;
+        public static final int editText3=0x7f070072;
+        public static final int editText4=0x7f070073;
+        public static final int editText5=0x7f070074;
         public static final int editText51=0x7f070043;
         public static final int editText53=0x7f070044;
-        public static final int editText6=0x7f070073;
-        public static final int editText7=0x7f070074;
+        public static final int editText6=0x7f070075;
+        public static final int editText7=0x7f070076;
         public static final int edit_query=0x7f070030;
         public static final int end=0x7f07000c;
         public static final int expand_activities_button=0x7f070026;
@@ -995,8 +997,8 @@ containing a value of this type.
         public static final int icon=0x7f07002a;
         public static final int ifRoom=0x7f07000e;
         public static final int image=0x7f070027;
-        public static final int imageView=0x7f070049;
-        public static final int infolayout=0x7f07004a;
+        public static final int imageView=0x7f07004a;
+        public static final int infolayout=0x7f07004b;
         public static final int listMode=0x7f070001;
         public static final int list_item=0x7f070029;
         public static final int middle=0x7f07000b;
@@ -1006,16 +1008,16 @@ containing a value of this type.
         public static final int progress_circular=0x7f070018;
         public static final int progress_horizontal=0x7f070019;
         public static final int radio=0x7f07002f;
-        public static final int radioButton=0x7f070058;
-        public static final int radioButton2=0x7f070059;
-        public static final int radioButton3=0x7f07005b;
-        public static final int radioButton4=0x7f07005c;
-        public static final int radioButton5=0x7f07005d;
-        public static final int radioButton6=0x7f07005e;
-        public static final int radioButton7=0x7f07005f;
-        public static final int radioGroup=0x7f070057;
-        public static final int radioGroup2=0x7f07005a;
-        public static final int scrollView=0x7f070060;
+        public static final int radioButton=0x7f070059;
+        public static final int radioButton2=0x7f07005a;
+        public static final int radioButton3=0x7f07005d;
+        public static final int radioButton4=0x7f07005e;
+        public static final int radioButton5=0x7f07005f;
+        public static final int radioButton6=0x7f070060;
+        public static final int radioButton7=0x7f070061;
+        public static final int radioGroup=0x7f070058;
+        public static final int radioGroup2=0x7f07005c;
+        public static final int scrollView=0x7f07005b;
         public static final int search_badge=0x7f070032;
         public static final int search_bar=0x7f070031;
         public static final int search_button=0x7f070033;
@@ -1034,29 +1036,29 @@ containing a value of this type.
         public static final int submit_area=0x7f070039;
         public static final int tabMode=0x7f070002;
         public static final int textView=0x7f07003d;
-        public static final int textView10=0x7f070062;
-        public static final int textView11=0x7f070063;
-        public static final int textView12=0x7f070064;
-        public static final int textView13=0x7f070065;
-        public static final int textView14=0x7f070066;
-        public static final int textView15=0x7f070067;
+        public static final int textView10=0x7f070063;
+        public static final int textView11=0x7f070064;
+        public static final int textView12=0x7f070065;
+        public static final int textView13=0x7f070066;
+        public static final int textView14=0x7f070067;
+        public static final int textView15=0x7f070068;
         public static final int textView2=0x7f07003f;
         public static final int textView3=0x7f070045;
-        public static final int textView31=0x7f07006e;
-        public static final int textView32=0x7f07006f;
-        public static final int textView4=0x7f07004b;
-        public static final int textView5=0x7f07004d;
+        public static final int textView31=0x7f07006f;
+        public static final int textView32=0x7f070070;
+        public static final int textView4=0x7f07004c;
+        public static final int textView5=0x7f07004e;
         public static final int textView51=0x7f070042;
-        public static final int textView6=0x7f07004f;
-        public static final int textView61=0x7f07006b;
-        public static final int textView62=0x7f07006c;
-        public static final int textView63=0x7f07006d;
-        public static final int textView7=0x7f07004e;
-        public static final int textView8=0x7f07004c;
-        public static final int textView81=0x7f070051;
-        public static final int textView82=0x7f070052;
-        public static final int textView83=0x7f070053;
-        public static final int textView9=0x7f070061;
+        public static final int textView6=0x7f070050;
+        public static final int textView61=0x7f07006c;
+        public static final int textView62=0x7f07006d;
+        public static final int textView63=0x7f07006e;
+        public static final int textView7=0x7f07004f;
+        public static final int textView8=0x7f07004d;
+        public static final int textView81=0x7f070052;
+        public static final int textView82=0x7f070053;
+        public static final int textView83=0x7f070054;
+        public static final int textView9=0x7f070062;
         public static final int title=0x7f07002b;
         public static final int top_action_bar=0x7f070020;
         public static final int up=0x7f070021;
@@ -1165,13 +1167,7 @@ containing a value of this type.
         public static final int title_activity_third=0x7f0a0024;
     }
     public static final class style {
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
- API 11 theme customizations can go here. 
- API 14 theme customizations can go here. 
+        /**  API 11 theme customizations can go here. 
          */
         public static final int AppBaseTheme=0x7f0b0000;
         public static final int AppTheme=0x7f0b0001;
@@ -1233,11 +1229,11 @@ containing a value of this type.
         public static final int Theme_Base_AppCompat_Dialog_FixedSize=0x7f0b0039;
         public static final int Theme_Base_AppCompat_Dialog_Light_FixedSize=0x7f0b003a;
         public static final int Theme_Base_AppCompat_DialogWhenLarge=0x7f0b003b;
-        public static final int Theme_Base_AppCompat_DialogWhenLarge_Base=0x7f0b008e;
+        public static final int Theme_Base_AppCompat_DialogWhenLarge_Base=0x7f0b008f;
         public static final int Theme_Base_AppCompat_Light=0x7f0b003c;
         public static final int Theme_Base_AppCompat_Light_DarkActionBar=0x7f0b003d;
         public static final int Theme_Base_AppCompat_Light_DialogWhenLarge=0x7f0b003e;
-        public static final int Theme_Base_AppCompat_Light_DialogWhenLarge_Base=0x7f0b008f;
+        public static final int Theme_Base_AppCompat_Light_DialogWhenLarge_Base=0x7f0b0090;
         public static final int Theme_Base_Light=0x7f0b003f;
         public static final int Widget_AppCompat_ActionBar=0x7f0b0040;
         public static final int Widget_AppCompat_ActionBar_Solid=0x7f0b0041;
@@ -1317,6 +1313,7 @@ containing a value of this type.
         public static final int Widget_AppCompat_ProgressBar=0x7f0b008b;
         public static final int Widget_AppCompat_ProgressBar_Horizontal=0x7f0b008c;
         public static final int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0b008d;
+        public static final int textEntry=0x7f0b008e;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.

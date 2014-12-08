@@ -9,11 +9,6 @@
     tools:context=".MainActivity"
     >
 
-     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
 
 
         <TextView
@@ -83,6 +78,12 @@
             android:layout_alignParentStart="true"
             android:layout_marginTop="10dp"
             />
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:id="@+id/scrollView"
+        android:layout_above="@+id/button">
 
         <RadioGroup
             android:layout_width="fill_parent"
@@ -144,7 +145,8 @@
                 android:textColor="#fff"/>
 
         </RadioGroup>
-    </LinearLayout>
+    </ScrollView>
+
 
 
                 <Button

@@ -49,32 +49,35 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
 
+                System.out.println(weekGroup.getCheckedRadioButtonId());
+                System.out.println(dayGroup.getCheckedRadioButtonId());
+
                 // Set Week Variable
                 System.out.println(weekGroup.getCheckedRadioButtonId());
-                if (weekGroup.getCheckedRadioButtonId() == 2131165272) {
+                if (weekGroup.getCheckedRadioButtonId() == R.id.radioButton) {
                     mWeek = "A";
                 }
 
-                else if (weekGroup.getCheckedRadioButtonId() == 2131165273) {
+                else if (weekGroup.getCheckedRadioButtonId() == R.id.radioButton2) {
                     mWeek = "B";
 
                 }
 
                 // Set Day Variable
                 System.out.println(dayGroup.getCheckedRadioButtonId());
-                if (dayGroup.getCheckedRadioButtonId() == 2131165275) {
+                if (dayGroup.getCheckedRadioButtonId() == R.id.radioButton3) {
                     mDay = "Monday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165276) {
+                else if (dayGroup.getCheckedRadioButtonId() == R.id.radioButton4) {
                     mDay = "Tuesday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165277) {
+                else if (dayGroup.getCheckedRadioButtonId() == R.id.radioButton5) {
                     mDay = "Wednesday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165278) {
+                else if (dayGroup.getCheckedRadioButtonId() == R.id.radioButton6) {
                     mDay = "Thursday";
                 }
-                else if (dayGroup.getCheckedRadioButtonId() == 2131165279) {
+                else if (dayGroup.getCheckedRadioButtonId() == R.id.radioButton7) {
                     mDay = "Friday";
                 }
 

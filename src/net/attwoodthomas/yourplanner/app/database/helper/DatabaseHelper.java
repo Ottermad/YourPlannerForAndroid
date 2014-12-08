@@ -14,6 +14,7 @@ import android.util.Log;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Member Variables
+    public String TAG = "DatabaseHelper";
 	
 	// Base Functions
 
@@ -24,54 +25,59 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     // Create Tables and insert data if need be
     public void onCreate(SQLiteDatabase paramSQLiteDatabase) {
-        // Create Table lessons to store people's timetable
-        paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20), Period7 VARCHAR(20));");
+        try {
+            // Create Table lessons to store people's timetable
+            paramSQLiteDatabase.execSQL("CREATE TABLE lessons (Week VARCHAR(1), Day VARCHAR(10), Period1 VACHAR(20),Period2 VARCHAR(20),Period3 VARCHAR(20),Period4 VARCHAR(20),Period5 VARCHAR(20),Period6 VARCHAR(20), Period7 VARCHAR(20));");
 
-        // Create Table homework to store people's homework
-        paramSQLiteDatabase.execSQL("CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+            // Create Table homework to store people's homework
+            paramSQLiteDatabase.execSQL("CREATE TABLE homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
 
-        // Create Table past_homework to store people's completed homework
-        paramSQLiteDatabase.execSQL("CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
+            // Create Table past_homework to store people's completed homework
+            paramSQLiteDatabase.execSQL("CREATE TABLE past_homework (Subject VARCHAR(50), DateDue VARCHAR(50), Description VARCHAR(100));");
 
-        // Create Table merits to store people's merits
-        paramSQLiteDatabase.execSQL("CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
+            // Create Table merits to store people's merits
+            paramSQLiteDatabase.execSQL("CREATE TABLE merits (total_merits VARCHAR(5), used_merits VARCHAR(5));");
 
-        // Create Table codes to store the teacher's codes they enter to add merits
-        paramSQLiteDatabase.execSQL("CREATE TABLE codes (code VARCHAR(10));");
+            // Create Table codes to store the teacher's codes they enter to add merits
+            paramSQLiteDatabase.execSQL("CREATE TABLE codes (code VARCHAR(10));");
 
-        // Create Table periods to store how many periods the user has in  a day
-        paramSQLiteDatabase.execSQL("CREATE TABLE periods (periods VARCHAR(10));");
+            // Create Table periods to store how many periods the user has in  a day
+            paramSQLiteDatabase.execSQL("CREATE TABLE periods (periods VARCHAR(10));");
 
-        // Create Table name
-        paramSQLiteDatabase.execSQL("CREATE table name (name VARCHAR(50));");
+            // Create Table name
+            paramSQLiteDatabase.execSQL("CREATE table name (name VARCHAR(50));");
 
-        // Create Table photo
-        paramSQLiteDatabase.execSQL("CREATE table photo (path VARCHAR(500));");
+            // Create Table photo
+            paramSQLiteDatabase.execSQL("CREATE table photo (path VARCHAR(500));");
 
-        // Check if lessons table is populated if not insert dummy data
-        if (paramSQLiteDatabase.rawQuery("SELECT * FROM lessons", null).moveToFirst()) {
-            Log.d("DatabaseHelper", "not emtpy");
-            return;
-        } else {
-            Log.d("DatabaseHelper", "emtpy");
-            paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ('A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama','Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading','Drama', 'Drama', 'Music'),('A', 'Wednesday','Drama', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'Drama','SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE','SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Drama','Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'Drama','PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Drama', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE','Drama', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE','Drama', 'Reading', 'Drama', 'Music');");
+            // Check if lessons table is populated if not insert dummy data
+            if (paramSQLiteDatabase.rawQuery("SELECT * FROM lessons", null).moveToFirst()) {
+                Log.d("DatabaseHelper", "not emtpy");
+                return;
+            } else {
+                Log.d("DatabaseHelper", "emtpy");
+                paramSQLiteDatabase.execSQL("INSERT INTO lessons VALUES ( 'A', 'Monday', 'PE', 'PE', 'SE', 'Reading', 'Drama','Drama', 'Music'), ('A', 'Tuesday', 'PE', 'PE', 'SE', 'Reading','Drama', 'Drama', 'Music'),('A', 'Wednesday','Drama', 'PE', 'PE', 'SE', 'Reading', 'Drama', 'Music'),('A', 'Thursday', 'PE', 'PE', 'Drama','SE', 'Reading', 'Drama', 'Music'),('A', 'Friday', 'PE', 'PE', 'SE','SE', 'Reading', 'Drama', 'Music'),('B', 'Monday', 'PE', 'PE', 'SE', 'Drama','Reading', 'Drama', 'Music'),('B', 'Tuesday', 'PE', 'Drama','PE', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Wednesday', 'PE', 'PE', 'SE', 'Drama', 'Reading', 'Drama', 'Music'), ('B', 'Thursday', 'PE', 'PE','Drama', 'SE', 'Reading', 'Drama', 'Music'),('B', 'Friday', 'PE', 'PE', 'SE','Drama', 'Reading', 'Drama', 'Music'); ");
+            }
+
+            // Check if homwork is not populated if so insert dummy data
+            if (!paramSQLiteDatabase.rawQuery("SELECT * FROM homework", null).moveToFirst()) {
+                paramSQLiteDatabase.execSQL("INSERT INTO homework VALUES ('Maths', '08.03.04', 'Finish p38');");
+            }
+
+            System.out.println("DB Merits");
+            System.out.println(paramSQLiteDatabase.rawQuery("SELECT * FROM merits", null).moveToFirst());
+            // Check if merits is not populated if so insert dummy data
+            if (paramSQLiteDatabase.rawQuery("SELECT * FROM merits", null).moveToFirst() == false) {
+                paramSQLiteDatabase.execSQL("INSERT INTO merits VALUES ('0', '0');");
+            }
+
+            // Check if codes is not populated if so insert dummy data
+            if (!paramSQLiteDatabase.rawQuery("SELECT * FROM codes", null).moveToFirst()) {
+                paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
+            }
+        } catch (Exception e) {
+            Log.e(TAG, e.toString());
         }
-
-        // Check if homwork is not populated if so insert dummy data
-        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM homework", null).moveToFirst()) {
-            paramSQLiteDatabase.execSQL("INSERT INTO homework VALUES ('Maths', '08.03.04', 'Finish p38');");
-        }
-
-        // Check if merits is not populated if so insert dummy data
-        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM merits", null).moveToFirst()) {
-            paramSQLiteDatabase.execSQL("INSERT INTO merits VALUES ('0', '0');");
-        }
-
-        // Check if codes is not populated if so insert dummy data
-        if (!paramSQLiteDatabase.rawQuery("SELECT * FROM codes", null).moveToFirst()) {
-            paramSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
-        }
-
 
     }
 
@@ -259,8 +265,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] arrayOfString = {};
         Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM merits", arrayOfString);
         localCursor.moveToNext();
-        merits[0] = localCursor.getString(0);
-        merits[1] = localCursor.getString(1);
+        if( localCursor != null && localCursor.moveToFirst() ) {
+            merits[0] = localCursor.getString(0);
+            merits[1] = localCursor.getString(1);
+        }
         return merits;
 
 
@@ -274,8 +282,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] arrayOfString = {};
         Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM merits", arrayOfString);
         localCursor.moveToNext();
-        total_merits = localCursor.getString(localCursor.getColumnIndex("total_merits"));
-        used_merits = localCursor.getString(localCursor.getColumnIndex("used_merits"));
+        if( localCursor != null && localCursor.moveToFirst() ) {
+            total_merits = localCursor.getString(localCursor.getColumnIndex("total_merits"));
+            used_merits = localCursor.getString(localCursor.getColumnIndex("used_merits"));
+        } else {
+            total_merits = "0";
+            used_merits = "0";
+        }
 
         boolean valid_code = false;
         localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM codes", arrayOfString);
@@ -299,7 +312,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             localSQLiteDatabase.execSQL("INSERT INTO codes VALUES ('ABCDEFGHIJ');");
         }
 
-        System.out.println(code.equals(localCursor.getString(0)));
+
         Log.d("TAG", total_merits);
         Log.d("TAG", used_merits);
 
@@ -405,8 +418,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
         String[] arrayOfString = {};
         Cursor localCursor = localSQLiteDatabase.rawQuery("SELECT * FROM name", arrayOfString);
-        localCursor.moveToNext();
-        String name = localCursor.getString(localCursor.getColumnIndex("name"));
+        System.out.println(localCursor.moveToFirst());
+        String name = localCursor.getString(0);
         return name;
 
     }
@@ -430,4 +443,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return name;
     }
 
+    // Date Functions
+    public void convertDate () {
+        SQLiteDatabase localSQLiteDatabase = getReadableDatabase();
+
+    }
 }

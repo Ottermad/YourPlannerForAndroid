@@ -7,6 +7,7 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -141,17 +142,38 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_home);
 
-            if (findViewById(R.id.textView2) != null) {
-                mName = (TextView) findViewById(R.id.textView2);
 
+        SQLiteDatabase sb = db.getWritableDatabase();//this line responsible to call onCreate()
+        System.out.println(0);
+
+        try {
+
+            if (findViewById(R.id.textView2) != null) {
+
+                System.out.println(1);
+                mName = (TextView) findViewById(R.id.textView2);
+                System.out.println(2);
 
                 System.out.println(db.checkName());
-                if (!db.checkName()) {
+                System.out.println(3);
+                if (db.checkName() == false) {
+                    System.out.println(4);
                     Intent intent = new Intent(HomeActivity.this, NameActivity.class);
                     startActivity(intent);
+                    System.out.println(5);
                 }
-                mName.setText(db.getName());
+                System.out.println(6);
+                try {
+                    mName.setText(db.getName());
+                } catch (Exception e) {
+                    Log.e(TAG, e.toString());
+                }
+                System.out.println(7);
             }
+        }
+        catch (Exception e) {
+            Log.e(TAG, e.toString());
+        }
 
             mHomeworkDue = (TextView) findViewById(R.id.textView4);
             mHomeworkDone = (TextView) findViewById(R.id.textView5);
@@ -176,10 +198,7 @@ public class HomeActivity extends Activity {
                 mImage.setImageResource(R.drawable.plus);
             }
 
-            if (findViewById(R.id.textView2) != null) {
-                mName = (TextView) findViewById(R.id.textView2);
-                mName.setText(db.getName());
-            }
+
             String[] merits = db.getMerits();
             int homework = db.getNumberOfHomework();
             int completed_homework = db.getNumberOfCompletedHomework();

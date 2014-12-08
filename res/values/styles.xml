@@ -4,12 +4,15 @@
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
     -->
-    <style name="AppBaseTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen">
+    <style name="AppBaseTheme" parent="android:Theme.Black.NoTitleBar.Fullscreen">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
         -->
+
+        <item name="android:editTextStyle">@style/textEntry</item>
+
 
     </style>
 
@@ -19,14 +22,20 @@
         <item name="android:background">#3C4952
         </item>
 
-        <item name="android:textColor">#FFFFFF</item>
+
+
+
 
 
 
 
     </style>
 
+    <style name="textEntry" parent="@android:style/Widget.EditText">
 
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/abc_textfield_search_right_default_holo_dark</item>
+    </style>
 
     <style name="ButtonBlue" parent="@android:style/Widget.Button">
         <item name="android:textColor">#FFFFFF</item>
